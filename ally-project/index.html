@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Ally</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body class="form__font">
+    <header class="m-5" id="logo">
+        <img src="./assets/img/Logo.png" class="rounded mx-auto d-block" alt="logomarcar da ally">
+    </header>
+    <section id="cadastro">
+        <h1 class="display-6 mb-3 mt-4 px-5"><strong>Cadastro de Cursos</strong></h1>
+        <div class="mb-3 mt-4 px-5">
+            <label for="exampleFormControlInput1" class="form-label">Nome do curso</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex.: Inglês para negócios" data-form-curso>
+        </div>
+        <div class="mb-3 mt-4 px-5">
+            <label for="exampleFormControlInput1" class="form-label">Data de Início</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="01/08/2021" data-form-dataInicio>
+        </div>
+        <div class="mb-3 mt-4 px-5">
+            <label for="exampleFormControlInput1" class="form-label">Data de Fim</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="01/08/2021" data-form-dataFim>
+        </div>
+        <div class="mb-3 mt-4 px-5">
+            <label for="exampleFormControlInput1" class="form-label">Duração (Semanas)</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ex.: 25" data-form-duracao>
+        </div>
+        <div class="mb-3 mt-4 px-5">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Adicione aqui a descrição do curso" data-form-descricao></textarea>
+        </div>
+        <div class="d-md-flex justify-content-md-end">
+            <button type="button" onclick="cadastrarCurso()" class="btn btn-outline-warning me-5 mt-2" data-form-add>Cadastrar</button>
+        </div>
+    </section>
+    <section id="lista">
+        <h1 class="display-6 mb-3 mt-4 px-5"><strong>Lista de Cursos</strong></h1>
+        <div>
+            <form class="d-flex mb-3 mt-4 px-5">
+                <input class="form-control me-2" type="search" placeholder="Busque pelo nome do curso" aria-label="Search">
+                <button class="btn btn-outline-warning" type="submit">Procurar</button>
+            </form>
+        </div>
+
+        <ul class="list" data-list></ul>
+
+        <!-- <div class="table-responsive mb-3 mt-4 px-5">
+            <table class="table table-hover mb-3 mt-4 px-5">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Duração</th>
+                        <th scope="col">Data Início</th>
+                        <th scope="col">Data Término</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+    </section>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
